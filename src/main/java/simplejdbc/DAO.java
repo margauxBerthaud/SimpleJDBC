@@ -114,7 +114,7 @@ public class DAO {
                     stmt.setInt(1, customerID);
                     try (ResultSet rs =stmt.executeQuery()){
                         rs.next();
-                        resultat=new CustomerEntity(rs.getInt("CUSTOMER_ID"),rs.getString("NAME"),rs.getString("ADRESSLINE1"));
+                        resultat=new CustomerEntity(rs.getInt("CUSTOMER_ID"),rs.getString("NAME"),rs.getString("ADDRESSLINE1"));
                     }
 	}   catch (SQLException ex) {
                 Logger.getLogger("DAO").log(Level.SEVERE, null, ex);
@@ -141,7 +141,7 @@ public class DAO {
                      stmt.setString(1,state);
                  try (ResultSet rs = stmt.executeQuery()){
                      while (rs.next()){
-                         resultats = new CustomerEntity(rs.getInt("CUSTOMER_ID"), rs.getString("NAME"),rs.getString("ADRESSLINE1"));
+                         resultats = new CustomerEntity(rs.getInt("CUSTOMER_ID"), rs.getString("NAME"),rs.getString("ADDRESSLINE1"));
                          resultat.add(resultats);
                      }
                  }
